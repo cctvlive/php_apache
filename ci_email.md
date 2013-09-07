@@ -2,20 +2,32 @@
 email 类文件不动
 
 
-控制器里的方法内容:
+
    $config['protocol'] = 'smtp';
+   
           $config['smtp_host'] = 'ssl://smtp.gmail.com';
+          
           $config['smtp_user'] 'chinacodeigniter@gmail.com';
+          
           $config['smtp_pass'] = '**********';
+          
           $config['smtp_port'] = 465;
+          
         $config['charset'] = 'utf-8';
+        
         $config['smtp_timeout'] = 30;
+        
         $config['mailtype'] = 'text';
+        
         $config['wordwrap'] = TRUE;
+        
         $config['crlf']="\\r\\n";  
+        
          $config['newline']="\\r\\n";
          
+         
         $this->load->library('email');
+        
 
     $this->email->initialize($config);
           
