@@ -3,7 +3,9 @@ email 类文件不动
 
 
 
-   $config['protocol'] = 'smtp';
+   
+    
+          $config['protocol'] = 'smtp';
    
           $config['smtp_host'] = 'ssl://smtp.gmail.com';
           
@@ -13,23 +15,23 @@ email 类文件不动
           
           $config['smtp_port'] = 465;
           
-        $config['charset'] = 'utf-8';
+          $config['charset'] = 'utf-8';
         
-        $config['smtp_timeout'] = 30;
+          $config['smtp_timeout'] = 30;
         
-        $config['mailtype'] = 'text';
+          $config['mailtype'] = 'text';
+         
+          $config['wordwrap'] = TRUE;
         
-        $config['wordwrap'] = TRUE;
+          $config['crlf']="\\r\\n";  
         
-        $config['crlf']="\\r\\n";  
-        
-         $config['newline']="\\r\\n";
+          $config['newline']="\\r\\n";
          
          
-        $this->load->library('email');
+          $this->load->library('email');
         
 
-    $this->email->initialize($config);
+          $this->email->initialize($config);
           
           $this->email->from('chinacodeigniter@gmail.com', '中国共产党');
           $this->email->to('ctv_243028755@qq.com');
@@ -38,4 +40,8 @@ email 类文件不动
           
           $this->email->send();
 
-echo $this->email->print_debugger();
+
+          echo $this->email->print_debugger();
+
+
+
